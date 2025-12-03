@@ -1,0 +1,21 @@
+running egg_info
+writing ../../build/tb3_rnftsmc/tb3_rnftsmc.egg-info/PKG-INFO
+writing dependency_links to ../../build/tb3_rnftsmc/tb3_rnftsmc.egg-info/dependency_links.txt
+writing entry points to ../../build/tb3_rnftsmc/tb3_rnftsmc.egg-info/entry_points.txt
+writing requirements to ../../build/tb3_rnftsmc/tb3_rnftsmc.egg-info/requires.txt
+writing top-level names to ../../build/tb3_rnftsmc/tb3_rnftsmc.egg-info/top_level.txt
+reading manifest file '../../build/tb3_rnftsmc/tb3_rnftsmc.egg-info/SOURCES.txt'
+writing manifest file '../../build/tb3_rnftsmc/tb3_rnftsmc.egg-info/SOURCES.txt'
+running build
+running build_py
+copying tb3_rnftsmc/rnftsmc.py -> /home/ubuntu/tb3_ws/build/tb3_rnftsmc/build/lib/tb3_rnftsmc
+running install
+running install_lib
+copying /home/ubuntu/tb3_ws/build/tb3_rnftsmc/build/lib/tb3_rnftsmc/rnftsmc.py -> /home/ubuntu/tb3_ws/install/tb3_rnftsmc/lib/python3.10/site-packages/tb3_rnftsmc
+byte-compiling /home/ubuntu/tb3_ws/install/tb3_rnftsmc/lib/python3.10/site-packages/tb3_rnftsmc/rnftsmc.py to rnftsmc.cpython-310.pyc
+running install_egg_info
+removing '/home/ubuntu/tb3_ws/install/tb3_rnftsmc/lib/python3.10/site-packages/tb3_rnftsmc-0.0.0-py3.10.egg-info' (and everything under it)
+Copying ../../build/tb3_rnftsmc/tb3_rnftsmc.egg-info to /home/ubuntu/tb3_ws/install/tb3_rnftsmc/lib/python3.10/site-packages/tb3_rnftsmc-0.0.0-py3.10.egg-info
+running install_scripts
+Installing rnftsmc_controller script to /home/ubuntu/tb3_ws/install/tb3_rnftsmc/lib/tb3_rnftsmc
+writing list of installed files to '/home/ubuntu/tb3_ws/build/tb3_rnftsmc/install.log'

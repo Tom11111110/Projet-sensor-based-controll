@@ -1,0 +1,3 @@
+[console_scripts]
+rnftsmc_controller = tb3_rnftsmc.controller:main
+

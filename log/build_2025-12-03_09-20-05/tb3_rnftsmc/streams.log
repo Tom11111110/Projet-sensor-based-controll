@@ -1,0 +1,23 @@
+[2.636s] Invoking command in '/home/ubuntu/tb3_ws/src/tb3_rnftsmc': PYTHONPATH=/home/ubuntu/tb3_ws/build/tb3_rnftsmc/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ubuntu/tb3_ws/install/tb3_rnftsmc/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/tb3_rnftsmc build --build-base /home/ubuntu/tb3_ws/build/tb3_rnftsmc/build install --record /home/ubuntu/tb3_ws/build/tb3_rnftsmc/install.log --single-version-externally-managed
+[3.634s] running egg_info
+[3.636s] writing ../../build/tb3_rnftsmc/tb3_rnftsmc.egg-info/PKG-INFO
+[3.637s] writing dependency_links to ../../build/tb3_rnftsmc/tb3_rnftsmc.egg-info/dependency_links.txt
+[3.638s] writing entry points to ../../build/tb3_rnftsmc/tb3_rnftsmc.egg-info/entry_points.txt
+[3.639s] writing requirements to ../../build/tb3_rnftsmc/tb3_rnftsmc.egg-info/requires.txt
+[3.639s] writing top-level names to ../../build/tb3_rnftsmc/tb3_rnftsmc.egg-info/top_level.txt
+[3.647s] reading manifest file '../../build/tb3_rnftsmc/tb3_rnftsmc.egg-info/SOURCES.txt'
+[3.651s] writing manifest file '../../build/tb3_rnftsmc/tb3_rnftsmc.egg-info/SOURCES.txt'
+[3.652s] running build
+[3.652s] running build_py
+[3.654s] copying tb3_rnftsmc/controller.py -> /home/ubuntu/tb3_ws/build/tb3_rnftsmc/build/lib/tb3_rnftsmc
+[3.655s] running install
+[3.656s] running install_lib
+[3.660s] copying /home/ubuntu/tb3_ws/build/tb3_rnftsmc/build/lib/tb3_rnftsmc/controller.py -> /home/ubuntu/tb3_ws/install/tb3_rnftsmc/lib/python3.10/site-packages/tb3_rnftsmc
+[3.663s] byte-compiling /home/ubuntu/tb3_ws/install/tb3_rnftsmc/lib/python3.10/site-packages/tb3_rnftsmc/controller.py to controller.cpython-310.pyc
+[3.669s] running install_egg_info
+[3.676s] removing '/home/ubuntu/tb3_ws/install/tb3_rnftsmc/lib/python3.10/site-packages/tb3_rnftsmc-0.0.0-py3.10.egg-info' (and everything under it)
+[3.678s] Copying ../../build/tb3_rnftsmc/tb3_rnftsmc.egg-info to /home/ubuntu/tb3_ws/install/tb3_rnftsmc/lib/python3.10/site-packages/tb3_rnftsmc-0.0.0-py3.10.egg-info
+[3.684s] running install_scripts
+[3.765s] Installing rnftsmc_controller script to /home/ubuntu/tb3_ws/install/tb3_rnftsmc/lib/tb3_rnftsmc
+[3.766s] writing list of installed files to '/home/ubuntu/tb3_ws/build/tb3_rnftsmc/install.log'
+[3.886s] Invoked command in '/home/ubuntu/tb3_ws/src/tb3_rnftsmc' returned '0': PYTHONPATH=/home/ubuntu/tb3_ws/build/tb3_rnftsmc/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ubuntu/tb3_ws/install/tb3_rnftsmc/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/tb3_rnftsmc build --build-base /home/ubuntu/tb3_ws/build/tb3_rnftsmc/build install --record /home/ubuntu/tb3_ws/build/tb3_rnftsmc/install.log --single-version-externally-managed
