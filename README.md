@@ -32,4 +32,17 @@ All Matlab scripts are located in the folder: `matlab_simu_code/`
    - Compute the reference trajectory
    - Apply the RNFTSMC controller
    - Plot the robot’s actual trajectory versus the reference
-   - Display the position errors over ti
+   - Display the position errors over time
+  
+### Simulation Results
+
+The simulation shows the robot following a **circular trajectory** while compensating for disturbances.  
+The RNFTSMC controller ensures that the robot stays close to the reference path despite external perturbations.
+
+![Circular Trajectory Tracking](matlab_simu_code/results/trajectory_plot.png)
+
+> In the figure above, the **red dashed line** represents the reference circular trajectory,  
+> while the **blue line** shows the actual trajectory of the robot.  
+> The starting position is marked with a red circle.  
+> The results demonstrate the effectiveness of the robust nonlinear controller in maintaining accurate tracking.
+
