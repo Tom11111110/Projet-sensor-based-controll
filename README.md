@@ -39,10 +39,110 @@ All Matlab scripts are located in the folder: `matlab_simu_code/`
 The simulation shows the robot following a **circular trajectory** while compensating for disturbances.  
 The RNFTSMC controller ensures that the robot stays close to the reference path despite external perturbations.
 
-![Circular Trajectory Tracking](matlab_simu_code/results/trajectory_plot.png)
+![Circular Trajectory Tracking](Matlab_simu_code/results/trajectory_plot.png)
 
 > In the figure above, the **red dashed line** represents the reference circular trajectory,  
 > while the **blue line** shows the actual trajectory of the robot.  
 > The starting position is marked with a red circle.  
 > The results demonstrate the effectiveness of the robust nonlinear controller in maintaining accurate tracking.
+
+![Position Errors](Matlab_simu_code/results/Position_Errors.png)
+
+> The figure above shows the **position errors** over time for X and Y coordinates.  
+> It highlights how the controller reduces the deviation from the reference trajectory and maintains stable tracking despite disturbances.
+
+# ROS 2 / WSL Simulation Tutorial
+
+The ROS 2 simulation provides a realistic environment to test the controller before deploying it on physical hardware (TurtleBot3). We use the RNFTSMC Controller package developed in Python (`simu_rnftsmc`).
+
+---
+
+## 1. Prerequisites and Environment Setup
+
+This tutorial assumes you are working within your **WSL 2** terminal and that you have a functional **ROS 2 Humble** (or later) installation.
+
+### Dependencies
+Ensure you have the necessary ROS 2 packages and Python dependencies installed.
+
+```bash
+# Update ROS 2 dependencies
+sudo apt update
+rosdep install --from-paths src --ignore-src -r -y
+```
+
+### Navigate to the Workspace Root
+The ROS 2 workspace root is where the `src` folder is located (inside `Ros_code`).
+
+```bash
+cd ~/Projet-sensor-based-controll/Ros_code
+```
+
+---
+
+## 2. Building the ROS 2 Controller Package
+
+You need to build the Python package (`simu_rnftsmc`) so that the executable node is created and recognized by ROS 2.
+
+### Build the package
+```bash
+colcon build --packages-select simu_rnftsmc
+```
+
+### Source the environment
+This step is crucial and must be done in every new terminal you open before running ROS 2 commands.
+
+```bash
+source install/setup.bash
+```
+
+> **Note:** If you are using a base ROS 2 setup, you might also need to source your main ROS installation:
+> ```bash
+> source /opt/ros/humble/setup.bash
+> ```
+
+---
+
+## 3. Running the Simulation Node
+
+The simulation is a simple self-contained environment where the controller node calculates the dynamics, updates the robot's pose, and publishes the results.
+
+### Execute the RNFTSMC Controller Node
+```bash
+ros2 run simu_rnftsmc rnftsmc_controller
+```
+
+The node will start running at the defined control rate (50 Hz by default). You should see the initial log message:
+```
+RNFTSMC controller started at 50.0 Hz.
+```
+
+---
+
+## 4. Visualization with RViz2
+
+To visualize the trajectory, robot pose, and the path, you need to launch RViz2 in a separate terminal.
+
+### Open a New Terminal (WSL)
+Source the environment (mandatory):
+
+```bash
+cd ~/Projet-sensor-based-controll/Ros_code
+source install/setup.bash
+```
+
+### Launch RViz2
+```bash
+rviz2
+```
+
+### Configure RViz2
+Once the RViz window opens:
+1. In the **Display** panel, set the **Fixed Frame** to `map`.
+2. Click **Add** (bottom left) and add the following displays:
+   - **Marker** (Topic: `/reference_trajectory`) → Shows the red circular path.
+   - **Path** (Topic: `/robot_path`) → Shows the blue line traced by the robot.
+   - **PoseStamped** (Topic: `/pose`) → Shows the current estimated pose/position.
+   - **TF** → Shows the transformation tree (`map` → `base_link`, etc.)
+
+You will see the robot's pose (`base_link`) closely follow the red reference circle, demonstrating the controller's effectiveness in tracking and disturbance rejection, mirroring the results seen in the Matlab simulation.
 
