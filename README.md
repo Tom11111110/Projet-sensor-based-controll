@@ -55,8 +55,6 @@ The RNFTSMC controller ensures that the robot stays close to the reference path 
 
 The ROS 2 simulation provides a realistic environment to test the controller before deploying it on physical hardware (TurtleBot3). We use the RNFTSMC Controller package developed in Python (`simu_rnftsmc`).
 
----
-
 ## 1. Prerequisites and Environment Setup
 
 This tutorial assumes you are working within your **WSL 2** terminal and that you have a functional **ROS 2 Humble** (or later) installation.
@@ -76,8 +74,6 @@ The ROS 2 workspace root is where the `src` folder is located (inside `Ros_code`
 ```bash
 cd ~/Projet-sensor-based-controll/Ros_code
 ```
-
----
 
 ## 2. Building the ROS 2 Controller Package
 
@@ -100,8 +96,6 @@ source install/setup.bash
 > source /opt/ros/humble/setup.bash
 > ```
 
----
-
 ## 3. Running the Simulation Node
 
 The simulation is a simple self-contained environment where the controller node calculates the dynamics, updates the robot's pose, and publishes the results.
@@ -115,8 +109,6 @@ The node will start running at the defined control rate (50 Hz by default). You 
 ```
 RNFTSMC controller started at 50.0 Hz.
 ```
-
----
 
 ## 4. Visualization with RViz2
 
