@@ -1,0 +1,8 @@
+# Dossiers de compilation ROS 2/Colcon
+build/
+install/
+log/
+
+# Fichiers de cache Python
+__pycache__/
+*.pyc
