@@ -48,8 +48,9 @@ You can observe how the RNFTSMC controller reacts in real time.
 
 ### Additional GIFs
 
-- **Full Circle Perturbation (by hand)**  
-![Full circle hand perturbation](Ros_result/circle.gif)
+- **Full Circle**
+Demonstrates the robot completing a full circular trajectory.  
+![Full circle](Ros_result/circle.gif)
 
 - **Single Hand Perturbation**  
 Shows how the robot reacts to a single disturbance.  
