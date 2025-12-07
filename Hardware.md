@@ -44,7 +44,8 @@ ros2 run tb3_rnftsmc rnftsmc_controller
 Here is a video showing the TurtleBot3 in action with multiple tests, including perturbations applied by hand and with a blower.  
 You can observe how the RNFTSMC controller reacts in real time.
 
-**Watch the TurtleBot3 video here:** [Click to watch](https://youtu.be/LTFz7BQnAz)
+**Watch the full TurtleBot3 video showing multiple tests:** [Click here to watch](https://youtu.be/LTFz7BQnAzk)
+
 
 ### Additional GIFs
 
