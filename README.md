@@ -57,7 +57,7 @@ The ROS 2 simulation provides a realistic environment to test the controller bef
 
 ## 1. Prerequisites and Environment Setup
 
-This tutorial assumes you are working within your **WSL 2** terminal and that you have a functional **ROS 2 Humble** (or later) installation.
+This tutorial assumes you are working either within **WSL 2** or a **native Linux installation** (Ubuntu), and that you have a functional **ROS 2 Humble** (or later) setup.
 
 ### Dependencies
 Ensure you have the necessary ROS 2 packages and Python dependencies installed.
