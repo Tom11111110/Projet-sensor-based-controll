@@ -39,17 +39,19 @@ All Matlab scripts are located in the folder: `matlab_simu_code/`
 The simulation shows the robot following a **circular trajectory** while compensating for disturbances.  
 The RNFTSMC controller ensures that the robot stays close to the reference path despite external perturbations.
 
-![Circular Trajectory Tracking](Matlab_simu_code/results/trajectory_plot.png)
+<p align="center">
+  <img src="Matlab_simu_code/results/trajectory_plot.png" alt="Circular Trajectory Tracking" width="900">
+</p>
 
-> In the figure above, the **red dashed line** represents the reference circular trajectory,  
-> while the **blue line** shows the actual trajectory of the robot.  
-> The starting position is marked with a red circle.  
-> The results demonstrate the effectiveness of the robust nonlinear controller in maintaining accurate tracking.
+**Figure:** The robot follows the circular reference trajectory (red dashed line) while the blue line shows the actual robot path.
 
-![Position Errors](Matlab_simu_code/results/Position_Errors.png)
 
-> The figure above shows the **position errors** over time for X and Y coordinates.  
-> It highlights how the controller reduces the deviation from the reference trajectory and maintains stable tracking despite disturbances.
+<p align="center">
+  <img src="Matlab_simu_code/results/Position_Errors.png" alt="Position Errors" width="900">
+</p>
+
+**Figure:** Position errors over time for X and Y coordinates, showing stable convergence with the RNFTSMC controller.
+
 
 # ROS 2 / WSL Simulation Tutorial
 
@@ -133,8 +135,18 @@ Once the RViz window opens:
 2. Click **Add** (bottom left) and add the following displays:
    - **Marker** (Topic: `/reference_trajectory`) → Shows the red circular path.
    - **Path** (Topic: `/robot_path`) → Shows the blue line traced by the robot.
-   - **PoseStamped** (Topic: `/pose`) → Shows the current estimated pose/position.
-   - **TF** → Shows the transformation tree (`map` → `base_link`, etc.)
+   - **Pose** (Topic: `/pose`) → Shows the current estimated pose/position.
 
 You will see the robot's pose (`base_link`) closely follow the red reference circle, demonstrating the controller's effectiveness in tracking and disturbance rejection, mirroring the results seen in the Matlab simulation.
+
+## 5. Simulation Result
+
+Below is an example of the trajectory tracking obtained in RViz2:
+
+<p align="center">
+  <img src="Ros_result/Rviz_simu.png" alt="RViz2 simulation result" width="900">
+</p>
+
+**Figure:** The robot’s pose (`base_link`) follows the red circular reference trajectory.
+
 
