@@ -12,6 +12,7 @@ All Matlab scripts are located in the folder: `matlab_simu_code/`
 2. Open Matlab and navigate to that folder:
    ```matlab
    cd 'path_to/matlab_simu_code'
+    ```
 3. Run the main simulation script:
    ```matlab
    main.m
