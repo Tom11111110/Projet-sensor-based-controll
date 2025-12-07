@@ -1,5 +1,5 @@
-## Software: Matlab Simulation
-
+# Software: 
+### Matlab Simulation
 ### Overview
 The Matlab code implements a **Robust Nonlinear Fast Terminal Sliding Mode Controller (RNFTSMC)** for a two-wheeled mobile robot.  
 The main goal is to make the robot follow a **circular trajectory** while handling external disturbances.
@@ -40,7 +40,7 @@ The RNFTSMC controller ensures that the robot stays close to the reference path 
 **Figure:** Position errors over time for X and Y coordinates, showing stable convergence with the RNFTSMC controller.
 
 
-# ROS 2 / WSL Simulation Tutorial
+## ROS 2 / WSL Simulation Tutorial
 
 The ROS 2 simulation provides a realistic environment to test the controller before deploying it on physical hardware (TurtleBot3). We use the RNFTSMC Controller package developed in Python (`simu_rnftsmc`).
 
