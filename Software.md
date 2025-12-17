@@ -33,7 +33,7 @@ All Matlab scripts are located in the folder: `matlab_simu_code/`
 
 #### 2. Position Errors
 <p align="center">
-  <img src="Matlab_simu_code/results/position_errors.png" alt="Position Errors" width="900">
+  <img src="Matlab_simu_code/results/Position_Errors.png" alt="Position Errors" width="900">
 </p>
 
 **Figure:** Errors in X and Y positions over time. The controller reduces errors despite disturbances.
