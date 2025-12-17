@@ -43,12 +43,21 @@ function dedt = error_dynamics_RNFTSMC(t, e, control_params, traj_params)
     % Total control (desired accelerations) - Equations (31) and (32)
     v_x_cmd = veqx + vswx;
     v_y_cmd = veqy + vswy;
+    
+    %  DISTURBANCE PARAMETER
+    t_start = 3;   % start of disturbance (s)
+    t_end   = 5;   % end of disturbance (s)
+    disturb_amp = 8;
 
-    %  External disturbances
-    rho_x = disturb_amp * sin(0.5 * t) + disturb_amp * cos(0.7 * t);
-    rho_y = rho_x;
+    if t >= t_start && t <= t_end
+        rho_x = disturb_amp * sin(0.5 * t) + disturb_amp * cos(0.7 * t);
+        rho_y = rho_x;
+    else
+        rho_x = 0;
+        rho_y = 0;
+    end
 
-    % Error dynamics (based on linearized state equations)
+    % Error dynamics
     de1dt = e3;
     de2dt = e4;
     de3dt = v_x_cmd - ddxd + rho_x;
