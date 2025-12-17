@@ -24,21 +24,48 @@ All Matlab scripts are located in the folder: `matlab_simu_code/`
   
 ### Simulation Results
 
-The simulation shows the robot following a **circular trajectory** while compensating for disturbances.  
-The RNFTSMC controller ensures that the robot stays close to the reference path despite external perturbations.
-
+#### 1. Robot vs Reference Trajectory
 <p align="center">
-  <img src="Matlab_simu_code/results/trajectory_plot.png" alt="Circular Trajectory Tracking" width="900">
+  <img src="Matlab_simu_code/results/trajectory_plot.png" alt="Robot vs Reference Trajectory" width="900">
 </p>
 
-**Figure:** The robot follows the circular reference trajectory (red dashed line) while the blue line shows the actual robot path.
+**Figure:** The blue line shows the robot’s actual path while the red dashed line shows the circular reference trajectory.
 
-
+#### 2. Position Errors
 <p align="center">
-  <img src="Matlab_simu_code/results/Position_Errors.png" alt="Position Errors" width="900">
+  <img src="Matlab_simu_code/results/position_errors.png" alt="Position Errors" width="900">
 </p>
 
-**Figure:** Position errors over time for X and Y coordinates, showing stable convergence with the RNFTSMC controller.
+**Figure:** Errors in X and Y positions over time. The controller reduces errors despite disturbances.
+
+#### 3. Sliding Surfaces
+<p align="center">
+  <img src="Matlab_simu_code/results/sliding_surfaces.png" alt="Sliding Surfaces" width="900">
+</p>
+
+**Figure:** Sliding surfaces σ_x and σ_y vs time, showing the convergence properties of the RNFTSMC controller.
+
+#### 4. Orientation vs Reference
+<p align="center">
+  <img src="Matlab_simu_code/results/orientation_vs_reference.png" alt="Orientation vs Reference" width="900">
+</p>
+
+**Figure:** Robot orientation θ (green) vs reference θ_ref (red dashed) over time.
+
+#### 5. Control Inputs vs Time
+<p align="center">
+  <img src="Matlab_simu_code/results/control_inputs.png" alt="Control Inputs vs Time" width="900">
+</p>
+
+**Figure:** The control signals v_x (blue) and v_y (red) applied to the robot over time.
+
+#### 6. Moment of Disturbance (Optional)
+<p align="center">
+  <img src="Matlab_simu_code/results/disturbance_moment.png" alt="Disturbance vs Time" width="900">
+</p>
+
+**Figure:** Shows when the external disturbance is applied (between t_start and t_end). This helps visualize its effect on robot trajectory and control signals.
+
 
 
 ## ROS 2 / WSL Simulation Tutorial
