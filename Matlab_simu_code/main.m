@@ -54,6 +54,9 @@ v_y_hist = zeros(length(t),1);
 
 for i = 1:length(t)
     [xd_ref, yd_ref, dxd_ref, dyd_ref, ddxd_ref, ddyd_ref] = trajectory_reference(t(i), traj_params);
+
+    x_ref_hist(i) = xd_ref;
+    y_ref_hist(i) = yd_ref;
     
     % Positions
     x_hist(i) = xd_ref + e_hist(i,1);
